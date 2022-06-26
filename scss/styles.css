@@ -192,4 +192,41 @@ body {
   border-radius: 3px;
   cursor: pointer;
 }
+
+.container main .result li button.animate {
+  -webkit-animation: copy 300ms 1 alternate;
+          animation: copy 300ms 1 alternate;
+  background: crimson;
+  color: #fff;
+}
+
+@-webkit-keyframes copy {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes copy {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 /*# sourceMappingURL=styles.css.map */

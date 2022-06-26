@@ -12,6 +12,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Montserrat;
+  max-width: 100%;
 }
 
 .container {
@@ -62,7 +63,7 @@ body {
 }
 
 .container main .generate:hover {
-  background: calc($accentColor + 100);
+  background: #bb1133;
 }
 
 .container main .settings {
@@ -179,11 +180,16 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 10px;
-  gap: 40px;
   font-size: 18px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.container main .result li span {
+  display: inline-block;
+  max-width: 80%;
+  word-wrap: break-word;
 }
 
 .container main .result li button {

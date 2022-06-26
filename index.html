@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/styles.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <h1>Settings</h1>
+            <ul class="settings">
+                <li>
+                    <span>Include lowercase symbols:</span>
+                    <label for="lowercase" class="custom-checkbox checked"></label>
+                    <input type="checkbox" id="lowercase" checked>
+                </li>
+                <li>
+                    <span>Include uppercase symbols:</span>
+                    <label for="uppercase" class="custom-checkbox"></label>
+                    <input type="checkbox" id="uppercase">
+                </li>
+                <li>
+                    <span>Include numbers:</span>
+                    <label for="numbers" class="custom-checkbox"></label>
+                    <input type="checkbox" id="numbers">
+                </li>
+                <li>
+                    <span>Include special symbols:</span>
+                    <label for="special" class="custom-checkbox"></label>
+                    <input type="checkbox" id="special">
+                </li>
+                <li>
+                    <span>Password length:</span>
+                    <div class="slider">
+                        <input type="range" id="passwordsLength" min="1" max="30" value="8">
+                        <span class="counter" id="passwordsLengthCounter">8</span>
+                    </div>
+                </li>
+                <li>
+                    <span>Number of passwords:</span>
+                    <div class="slider">
+                        <input type="range" id="numberOfPasswords" min="1" max="100" value="10">
+                        <span class="counter" id="numberOfPasswordsCounter">10</span>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="generate">Generate!</button>
+
+            <h1>Result</h1>
+            <ul class="result"></ul>
+        </main>
+    </div>
+</body>
+
+</html>

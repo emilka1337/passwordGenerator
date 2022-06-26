@@ -1,0 +1,195 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+.container {
+  padding: 50px 0px;
+  min-height: 100vh;
+  background: crimson;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container main {
+  background: #fff;
+  padding: 0px 50px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container main h1 {
+  text-align: center;
+  margin: 40px 0px;
+}
+
+.container main .generate {
+  background: crimson;
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+}
+
+.container main .generate:hover {
+  background: calc($accentColor + 100);
+}
+
+.container main .settings {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container main .settings li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 40px;
+  font-size: 18px;
+}
+
+.container main .settings li input[type="checkbox"] {
+  display: none;
+}
+
+.container main .settings li label {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container main .settings li label.checked {
+  background: crimson;
+}
+
+.container main .settings li label.checked::after {
+  content: "✔";
+  color: #fff;
+  position: relative;
+  top: -4px;
+  left: 2px;
+  font-size: 20px;
+}
+
+.container main .settings li input[type="text"] {
+  width: 50px;
+  padding: 0px 5px;
+  font-size: 18px;
+}
+
+.container main .settings li:nth-child(5), .container main .settings li:nth-child(6) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0px;
+  gap: 10px;
+}
+
+.container main .settings li:nth-child(5) .slider, .container main .settings li:nth-child(6) .slider {
+  width: 100%;
+  text-align: center;
+}
+
+.container main .settings li:nth-child(5) .slider input, .container main .settings li:nth-child(6) .slider input {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.container main .settings li:nth-child(5) .slider input::-webkit-slider-runnable-track, .container main .settings li:nth-child(6) .slider input::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  height: 7px;
+  background-color: crimson;
+}
+
+.container main .settings li:nth-child(5) .slider input::-webkit-slider-thumb, .container main .settings li:nth-child(6) .slider input::-webkit-slider-thumb {
+  background: #ffffff;
+  border: 2px solid crimson;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: -4px;
+  -webkit-appearance: none;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.container main .settings li:nth-child(5) .slider input::-webkit-slider-thumb:active, .container main .settings li:nth-child(6) .slider input::-webkit-slider-thumb:active {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.container main .result {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container main .result li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 40px;
+  font-size: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container main .result li button {
+  background: none;
+  border: 2px solid #000;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */

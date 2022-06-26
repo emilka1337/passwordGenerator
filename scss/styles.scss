@@ -1,0 +1,166 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+$accentColor: crimson;
+
+.container {
+    padding: 50px 0px;
+    min-height: 100vh;
+    background: $accentColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    main {
+        background: #fff;
+        padding: 0px 50px;
+        padding-bottom: 40px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+            margin: 40px 0px;
+        }
+
+        .generate {
+            background: $accentColor;
+            padding: 10px 25px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 22px;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background: calc($accentColor + 100);
+            }
+        }
+
+        .settings {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                gap: 40px;
+                font-size: 18px;
+
+                input[type="checkbox"] {
+                    display: none;
+                }
+
+                label {
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    border: 2px solid #000;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    &.checked {
+                        background: $accentColor;
+
+                        &::after {
+                            content: "✔";
+                            color: #fff;
+                            position: relative;
+                            top: -4px;
+                            left: 2px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                input[type="text"] {
+                    width: 50px;
+                    padding: 0px 5px;
+                    font-size: 18px;
+                }
+
+                &:nth-child(5),
+                &:nth-child(6) {
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 20px 0px;
+                    gap: 10px;
+
+                    .slider {
+                        width: 100%;
+                        text-align: center;
+
+                        input {
+                            width: 100%;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+
+                            &::-webkit-slider-runnable-track {
+                                border-radius: 10px;
+                                height: 7px;
+                                background-color: $accentColor;
+                            }
+
+                            &::-webkit-slider-thumb {
+                                background: #ffffff;
+                                border: 2px solid $accentColor;
+                                border-radius: 10px;
+                                cursor: pointer;
+                                width: 15px;
+                                height: 15px;
+                                position: relative;
+                                top: -4px;
+                                -webkit-appearance: none;
+                                transition: 200ms;
+
+                                &:active {
+                                    transform: scale(1.5);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .result {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                gap: 40px;
+                font-size: 18px;
+                align-items: center;
+
+                button {
+                    background: none;
+                    border: 2px solid #000;
+                    padding: 5px;
+                    border-radius: 3px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

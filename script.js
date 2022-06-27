@@ -14,8 +14,11 @@ document.querySelectorAll('input[type="range"]').forEach(item => {
 
 //#endregion
 
-let random = (min, max) => Math.floor(Math.random() * (max - min) + min);
+document.querySelector('.advanced-settings-toggler').addEventListener("click", function() {
+    document.querySelector('.advanced-settings').classList.toggle("expanded");
+});
 
+let random = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 function generatePasswords() {
     const CHECKBOXES_VALUES = [
@@ -51,6 +54,10 @@ function generatePasswords() {
             password += charset[random(0, charset.length)];
         }
 
+        if (document.querySelector('#requiredSymbols').value != "") {
+            password = insertRequiredSymbols(password);
+        }
+
         document.querySelector('.result').append(createPasswordContainer(password));
     }
 }
@@ -61,6 +68,23 @@ function validateCheckboxes(array) {
     }
 
     return false;
+}
+
+function insertRequiredSymbols(password) {
+    let requiredSymbols = document.querySelector('#requiredSymbols').value.split("");
+    password = password.split("");
+
+    for (let i = 0; i <= requiredSymbols.length; i++) {
+        let randIndex = random(0, password.length);
+
+        if (password[randIndex] != requiredSymbols[i]) {
+            password[randIndex] = requiredSymbols[i];
+        } else {
+            i-=2;
+        }
+    }
+
+    return password.join("");
 }
 
 function createPasswordContainer(passwordText) {

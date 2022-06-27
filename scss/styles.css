@@ -236,4 +236,75 @@ body {
             transform: scale(1);
   }
 }
+
+.container main .advanced-settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.container main .advanced-settings.expanded .advanced-settings-toggler svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.container main .advanced-settings.expanded .advanced-settings-list {
+  height: 50px !important;
+}
+
+.container main .advanced-settings .advanced-settings-toggler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid crimson;
+  cursor: pointer;
+}
+
+.container main .advanced-settings .advanced-settings-toggler svg {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.container main .advanced-settings .advanced-settings-list {
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  height: 0px;
+}
+
+.container main .advanced-settings .advanced-settings-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container main .advanced-settings .advanced-settings-list li input[type="text"] {
+  width: 30%;
+  font-size: 18px;
+  padding: 3px;
+}
 /*# sourceMappingURL=styles.css.map */

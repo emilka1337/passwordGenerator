@@ -54,5 +54,60 @@ $accentColor: crimson;
 
         @import "./settings";
         @import "./result";
+
+        .advanced-settings {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+
+            &.expanded {
+                .advanced-settings-toggler {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .advanced-settings-list {
+                    height: 50px !important;
+                }
+            }
+
+            .advanced-settings-toggler {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background: none;
+                border: none;
+                font-size: 18px;
+                padding-bottom: 3px;
+                border-bottom: 2px solid $accentColor;
+                cursor: pointer;
+
+                svg {
+                    transition: 300ms;
+                }
+            }
+
+            .advanced-settings-list {
+                padding: 0;
+                list-style: none;
+                overflow: hidden;
+                transition: 400ms;
+                height: 0px;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    input[type="text"] {
+                        width: 30%;
+                        font-size: 18px;
+                        padding: 3px;
+                    }
+                }
+            }
+        }
     }
 }
